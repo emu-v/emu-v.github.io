@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>emu-v</copyright>
-    <lastBuildDate>Tue, 08 Jun 2010 08:06:25 +0600</lastBuildDate><atom:link href="https://emu-v.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 09 Jun 2021 21:56:36 +0000</lastBuildDate><atom:link href="https://emu-v.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Resultados de Búsqueda</title>
       <link>https://emu-v.com/search/</link>
@@ -175,6 +175,15 @@ No content shown here is rendered, all content is based in the template layouts/
 Setting a very low sitemap priority will tell search engines this is not important content.
 This implementation uses Fusejs, jquery and mark.js
 Initial setup Search depends on additional output content type of JSON in config.toml ``` [outputs] home = [&amp;ldquo;HTML&amp;rdquo;, &amp;ldquo;JSON&amp;rdquo;] ```</description>
+    </item>
+    
+    <item>
+      <title>I was able to make avatars and worlds for Oculus Quest in VRChat</title>
+      <link>https://emu-v.com/posts/2021/06/i-was-able-to-make-avatars-and-worlds-for-quest-in-vrchat/</link>
+      <pubDate>Wed, 09 Jun 2021 21:56:36 +0000</pubDate>
+      
+      <guid>https://emu-v.com/posts/2021/06/i-was-able-to-make-avatars-and-worlds-for-quest-in-vrchat/</guid>
+      <description>(Original Japanese)気がつけばVRChatを始めて1ヶ月を過ぎていました。 (Japanese, Only Hiragana)きがつけば VRChatを はじめて １かげつを す</description>
     </item>
     
   </channel>

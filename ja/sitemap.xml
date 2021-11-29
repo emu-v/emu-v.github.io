@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://emu-v.com/ja/</loc>
-    <lastmod>2021-11-30T06:55:22+09:00</lastmod>
+    <lastmod>2021-11-30T07:35:44+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://emu-v.com/ja/posts/</loc>
-    <lastmod>2021-11-30T06:55:22+09:00</lastmod>
+    <lastmod>2021-11-30T07:35:44+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -28,14 +28,27 @@
                 href="https://emu-v.com/ja/posts/"
                 />
   </url><url>
+    <loc>https://emu-v.com/ja/posts/2021/06/i-was-able-to-make-avatars-and-worlds-for-quest-in-vrchat/</loc>
+    <lastmod>2021-11-30T07:35:44+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://emu-v.com/posts/2021/06/i-was-able-to-make-avatars-and-worlds-for-quest-in-vrchat/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://emu-v.com/ja/posts/2021/06/i-was-able-to-make-avatars-and-worlds-for-quest-in-vrchat/"
+                />
+  </url><url>
     <loc>https://emu-v.com/ja/posts/2021/05/i-have-been-living-in-vrchat-for-3weeks-and-became-the-user-rank/</loc>
-    <lastmod>2021-11-30T06:55:22+09:00</lastmod>
+    <lastmod>2021-11-30T07:35:44+09:00</lastmod>
   </url><url>
     <loc>https://emu-v.com/ja/posts/2021/05/i-enjoyed-vrchat-events-and-customizing-avatars-and-worlds-in-golden-week-vacation/</loc>
-    <lastmod>2021-11-30T06:55:22+09:00</lastmod>
+    <lastmod>2021-11-30T07:35:44+09:00</lastmod>
   </url><url>
     <loc>https://emu-v.com/ja/posts/2021/04/i-have-getting-started-vrchat/</loc>
-    <lastmod>2021-11-30T06:55:22+09:00</lastmod>
+    <lastmod>2021-11-30T07:35:44+09:00</lastmod>
   </url><url>
     <loc>https://emu-v.com/ja/categories/</loc>
     <xhtml:link
