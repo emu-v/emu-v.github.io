@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>【黒い画面不要】もうUnityプロジェクトが壊れても泣かない、時を戻せる魔法「GitHub」入門【無料です】</title>
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+
+<link rel="stylesheet" href="/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/layouts/main.css"/>
+<link rel="stylesheet" href="/css/navigators/navbar.css"/>
+<link rel="stylesheet" href="/css/plyr.css"/>
+<link rel="stylesheet" href="/css/flag-icon.min.css"/>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Muli:wght@300;400;500;600" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" />
+
+
+
+
+<meta property="og:title" content="【黒い画面不要】もうUnityプロジェクトが壊れても泣かない、時を戻せる魔法「GitHub」入門【無料です】" />
+<meta property="og:description" content="getting started github for creators" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://emu-v.com/ja/posts/2021/06/getting-started-github-for-creators/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-06-19T23:04:03+00:00" />
+<meta property="article:modified_time" content="2021-11-30T09:27:35+09:00" />
+
+
+
+    
+    
+<meta name="description" content="getting started github for creators" />
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css"
+/>
+<link rel="stylesheet" href="/css/layouts/single.css"/>
+<link rel="stylesheet" href="/css/navigators/sidebar.css">
+
+<link rel="stylesheet" href="/css/style.css"/>
+
+
+
+    
+    
+        
+        
+          
+          
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PD2X94EYF0"></script>
+<script>
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-PD2X94EYF0', { 'anonymize_ip': false });
+}
+</script>
+
+        
+    
+  </head>
+
+  <body data-spy="scroll" data-target="#TableOfContents" data-offset="80">
+    <div class="container-fluid bg-dimmed wrapper">
+      
+      
+    
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-xl top-navbar final-navbar shadow">
+  <div class="container">
+      <button class="navbar-toggler navbar-light" id="sidebar-toggler" type="button" onclick="toggleSidebar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/ja">
+      emu-v</a>
+    <button class="navbar-toggler navbar-light" id="toc-toggler" type="button" onclick="toggleTOC()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse lang-selector" id="top-nav-items">
+      <ul class="navbar-nav ml-auto">
+      
+      </ul>
+    </div>
+  </div>
+  
+  
+  
+</nav>
+
+
+
+      
+      
+  <section class="sidebar-section" id="sidebar-section">
+    <div class="sidebar-holder">
+      <div class="sidebar" id="sidebar">
+        <form class="mx-auto" method="get" action="/ja/search">
+          <input type="text" name="keyword" value="" placeholder="Search" data-search="" id="search-box" />
+        </form>
+        <div class="sidebar-tree">
+          <ul class="tree" id="tree">
+            <li id="list-heading"><a href="/ja/posts" data-filter="all">Posts</a></li>
+            <div class="subtree">
+                
+
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      
+      
+<section class="content-section" id="content-section">
+  <div class="content">
+    <div class="container p-0 read-area">
+      
+      <div class="hero-area col-sm-12" id="hero-area" style='background-image: url(https://emu-v.com/ja/posts/2021/06/getting-started-github-for-creators/images/github-1.png);'>
+      </div>
+
+      
+      <div class="page-content">
+        <div class="author-profile ml-auto align-self-lg-center">
+          <img class="rounded-circle" src='/images/author/emu-v_hufac5ac1d3e7c96aae63ca8f73234b6d4_57094_120x120_fit_box_3.png' alt="Author Image">
+          <h5 class="author-name">emu-v</h5>
+          <p>June 19, 2021</p>
+        </div>
+
+        <div class="title">
+          <h1>【黒い画面不要】もうUnityプロジェクトが壊れても泣かない、時を戻せる魔法「GitHub」入門【無料です】</h1>
+        </div>
+        
+        <div class="post-content" id="post-content">
+          <p>VRChatでアバターやワールドを作っていると「いつの間にかUnityプロジェクト壊れてた 🥺 」みたいな悲しいことが起こります。</p>
+<p>でも「GitHub（ギットハブ）」を使えば壊れる前まで時を戻せるようになります。</p>
+<p>この記事ではそんな方法を、できる限り簡単に、どうしても必要な部分だけご紹介します。<br>
+<strong>WindowsでもMacでも同じ手順</strong> で使えますし、GitHubの無償機能だけを使いますので <strong>追加費用もかかりません。</strong></p>
+<p>アナログ人間を自認するぼくのお友達を思い浮かべながら書いたので、プログラマさんが使ってる <strong>黒い画面や、呪文詠唱より難しそうな謎のコマンドは登場しません。</strong></p>
+<p>その代わりに、ガチプログラマの方にとっては突っ込みたくなる表現や手順があると思います。<br>
+それはぜひツイッターでコメントお願いします！</p>
+<h2 id="githubってなに">GitHubってなに？</h2>
+<p><a href="https://github.com/">GitHub</a>はUnityプロジェクトのようなフォルダとその内容、あるいはBlenderやPhotoshopで作ったファイルを世代管理する「バージョン管理」のクラウドサービスです。</p>
+<p>バージョン管理とは、例えばアバターさんの色改変に次のような「バージョン」を付けて、そのバージョンを戻したり進めたりできるようにすることです。</p>
+<ul>
+<li>春に作った花柄服着たこんちゃん→バージョン 2021.5.1</li>
+<li>七夕に合わせた浴衣こんちゃん→バージョン 2021.7.1</li>
+<li>ハロウィンこんちゃん→バージョン 2021.10.1</li>
+</ul>
+<p>バージョンはよくver.1.2.3 みたいな付け方をしますが、細かい話になるのでこの記事では省略します。</p>
+<p>GitHubは、この付けたバージョン毎に、Unityプロジェクトなどのファイル一式を預かってくれるサービスです。</p>
+<p>この記事で紹介する手順でGitHubのアカウントを作って、ファイル一式を送ると、世界のどこかにあるサーバーに、ぼくやあなたの作ったファイルが預けられます。</p>
+<h3 id="githubでできること">GitHubでできること</h3>
+<p>GitHubでバージョン管理すると次のようなことができるようになります。</p>
+<ol>
+<li>Unityプロジェクトや他のファイルを世代管理して、壊れたり失敗しても過去の状態に戻すことができます。</li>
+<li>複数のPCでUnityプロジェクトや他のファイルを交互に編集したり、新しいPCにこれらのファイルを復元できます。</li>
+<li>（この記事では扱いません）例えばあるテクスチャを赤と青どちらを基調にしようか迷ったとき、分岐して２つのバージョンを切り替えながら作業を進めることができます。</li>
+<li>（この記事では扱いません）あなたが指定した別の人とファイルを共有して共同で作業できます。</li>
+</ol>
+<h2 id="この記事の範囲">この記事の範囲</h2>
+<p>冒頭でご説明した通り、この記事の目的は必要最小限の学習と操作でUnityプロジェクトや他のファイルをバージョン管理し、守ることです。</p>
+<p>そのためGitHubの多くの高度な機能はご説明せず、次のごく一部の機能と手順だけをご紹介します。</p>
+<p>でも大丈夫です。<br>
+これらの機能だけを使い始めてもGitHubの恩恵を受けることができます。</p>
+<h3 id="この記事で扱うこと">この記事で扱うこと</h3>
+<p>この記事では次のような機能をご紹介し説明します。<br>
+ここだけ呪文のように感じるかもしれませんが、暗記する必要はないので安心してください。</p>
+<ul>
+<li>GitHubアカウント作成</li>
+<li>GitHubリポジトリ作成</li>
+<li>GitHub Desktopアプリのインストール</li>
+<li>GitリポジトリをCloneしてみる</li>
+<li>GitリポジトリをCommit &amp; Pushしてみる</li>
+<li>GitリポジトリをRevertしてみる</li>
+<li>GitリポジトリをPullしてみる</li>
+</ul>
+<h3 id="この記事で扱わないこと">この記事で扱わないこと</h3>
+<p>この記事では反対に次のような機能はご紹介自体しません。<br>
+慣れない分野の多すぎる情報は混乱を招くためです。</p>
+<ul>
+<li>ブランチとその操作</li>
+<li>IssueやPull Request</li>
+<li>Git LFS</li>
+<li>GitHub Actions, etc.</li>
+</ul>
+<h2 id="無料でgithubアカウントを取得する">無料でGitHubアカウントを取得する</h2>
+<p>まずはGitHubのアカウントを登録してみましょう！<br>
+今回ご紹介する内容はすべて無料です。</p>
+<p>GitHubアカウントを作るために用意するものは</p>
+<ul>
+<li>Emailアドレス</li>
+<li>使いたいパスワード</li>
+<li>使いたいアカウント名</li>
+</ul>
+<p>の3つです。</p>
+<p>ブラウザのアドレス欄に「github.com」と打ち込むと、2021年6月現在ではこんな画面が表示されます。<br>
+右上のSign Upボタンをクリックしましょう。</p>
+<p><img src="images/github-1.png" alt=""></p>
+<p>Email、パスワード、アカウント名をそれぞれ入力しましょう。<br>
+その他、メルマガの登録や「あなたは人間ですか？」のチェックがあります。</p>
+<p><img src="images/github-2.png" alt=""></p>
+<p>全ての項目に答えると次のような画面に移動し、登録したメールアドレス宛に確認メールが届きます。</p>
+<p><img src="images/github-3.png" alt=""></p>
+<p>メール内のボタンをクリックして登録完了です。</p>
+<p><img src="images/github-4.png" alt=""></p>
+<p>GitHubのアカウント作成が完了すると次のような画面が表示されます。</p>
+<p><img src="images/github-5.png" alt=""></p>
+<h2 id="web上でgithubを試す">Web上でGitHubを試す</h2>
+<p>最初にブラウザだけで「バージョン管理」を試します。<br>
+テキストファイルを作って、書き換えて、過去に戻せる様子を体験しましょう！</p>
+<h3 id="リポジトリとは">リポジトリとは？</h3>
+<p>まずは管理対象となる「リポジトリ」を作りましょう。<br>
+リポジトリは、WindowsやMacのドライブやフォルダのようなものです。<br>
+Unityプロジェクトなどバージョン管理したい対象をこのリポジトリの中に入れます。</p>
+<p>順にやっていきましょう。</p>
+<p>GitHubにサインインした状態で、右上の＋ボタンをクリックするといくつかのメニューが表示されます。<br>
+その中から「New repository」をクリックします。</p>
+<p><img src="images/github-6.png" alt=""></p>
+<p>そうすると次のような画面が表示されます。順に入力または選択していきましょう。</p>
+<p>「Repository name」はアルファベットでお好きな名前を入力しましょう。数字やハイフンも使えます。<br>
+ここでは「vrchat-avatars-sandbox」にします。</p>
+<p>Public / Privateは「Private」を選択します。<br>
+「Public」にすると世界中の人にこれから作るUnityプロジェクトなどが見えてしまいます。<br>
+VRChatのアバターやワールドに関しては常にPrivateに設定しておけば間違いないでしょう。</p>
+<p>「Add a README file」は説明ファイル作るかどうかの選択です。チェックを入れます。</p>
+<p>「Add .gitignore」もUnityプロジェクトを管理するときは便利な設定です。チェックを入れ、画像のように「.gitignore template」の入力欄に「unity」と入力し表示されたものを選択します。</p>
+<p><img src="images/github-7.png" alt=""></p>
+<p>最後に「Create repository」ボタンをクリックしましょう。</p>
+<p><img src="images/github-8.png" alt=""></p>
+<p>以上でリポジトリが作られます。<br>
+線を引いたリポジトリ名の部分をクリックすると、いつでもこのリポジトリのトップ画面に戻れます。<br>
+この記事の中で何度かページを行き来するので、迷子になったときはリポジトリ名をクリックしてこのページに戻ってくると便利です。</p>
+<p><img src="images/github-9.png" alt=""></p>
+<h3 id="まずはテキストファイルをコミットする">まずはテキストファイルを「コミット」する</h3>
+<p>では早速「バージョン管理」を体験しましょう！<br>
+まずはこのままブラウザを使ってWeb上だけで試します。</p>
+<p>テキストファイルを１つ作ります。<br>
+リポジトリのトップ画面にある「Add file」メニューから「Create new file」をクリックします。</p>
+<p><img src="images/github-10.png" alt=""></p>
+<p>次のような画面に移動するので丸で囲んだ箇所に作るファイル名を入力します。<br>
+ファイル名はアルファベット、数字、ハイフン、アンダースコアだけにしておくと安心です。<br>
+また今回はファイル名の最後を「.txt」にします。</p>
+<p>ここでは「memo.txt」としました。</p>
+<p><img src="images/github-11.png" alt=""></p>
+<p>「Edit new file」の欄に何か１行書き込んでみましょう。</p>
+<p><img src="images/github-12.png" alt=""></p>
+<p>次に「Commit new file」ボタンをクリックします。<br>
+この操作をコミット（Commit）と呼びます。</p>
+<p><img src="images/github-13.png" alt=""></p>
+<p>リポジトリのトップ画面を見ると今作った「memo.txt」が追加されています。<br>
+この「memo.txt」をクリックしてみましょう。</p>
+<p><img src="images/github-14.png" alt=""></p>
+<p>次のような画面に移動し、先ほど書いた内容が表示されます。<br>
+これが「コミット」で、追加や変更した内容をGitHubに預ける操作です。</p>
+<p><img src="images/github-15.png" alt=""></p>
+<p>リポジトリのトップ画面を表示し、今度は丸で囲んだ「（数字）commits」と表示されている部分をクリックしてください。</p>
+<p><img src="images/github-16.png" alt=""></p>
+<p>次のような画面に移動します。<br>
+これは先ほどのような操作でコミットした内容の一覧です。</p>
+<p>ややこしいのですが、コミットした内容の１つ１つも「コミット（Commit）」と呼ばれます。<br>
+操作も内容も「コミット（Commit）」というわけです。</p>
+<p><img src="images/github-17.png" alt=""></p>
+<p>内容の方のコミットはバージョンの元あるいは材料になります。<br>
+この記事では扱いませんが、この「コミット」に「ver.1.2.3」のような「タグ」を割り当てて「バージョン」として扱います。</p>
+<p>2種類のコミットが混在するのは混乱の元なので、内容の方のコミットをこの記事では「コミット（バージョン）」と書きます。</p>
+<p>このコミット（バージョン）を開くと、追加した行らしきものが「＋」記号と共に表示されています。<br>
+これは「＋記号で始まる行が追加された」という意味です。</p>
+<p><img src="images/github-18.png" alt=""></p>
+<h3 id="さらにテキストファイルを編集してコミットする">さらにテキストファイルを編集して「コミット」する</h3>
+<p>続けて同じテキストファイルに2行目を書き込んでみましょう。<br>
+リポジトリのトップ画面からテキストファイルをクリックします。</p>
+<p><img src="images/github-19.png" alt=""></p>
+<p>今度は右下の鉛筆のようなマークをクリックします。</p>
+<p><img src="images/github-20.png" alt=""></p>
+<p>そうすると先ほどと同じようなテキストを編集できる画面に移動するので、2行目を追加します。</p>
+<p><img src="images/github-21.png" alt=""></p>
+<p>そして「Commit changes」ボタンをクリックします。</p>
+<p><img src="images/github-22.png" alt=""></p>
+<p>コミットが成功するとこのような画面に移動します。</p>
+<p><img src="images/github-23.png" alt=""></p>
+<p>丸で囲んだ部分をクリックしてリポジトリのトップ画面に移動します。</p>
+<p><img src="images/github-24.png" alt=""></p>
+<p>「（数字）commits」と表示されている部分が増えていることが確認できます。<br>
+これはコミット（バージョン）が追加されたことを表しています。</p>
+<p><img src="images/github-25.png" alt=""></p>
+<h2 id="ローカルpcでgithub-desktopアプリを使う">ローカルPCでGitHub Desktopアプリを使う</h2>
+<p>UnityやBlenderでの制作に役立てるために、Web上だけではなく次はあなたのローカルPCでGitHubを使ってみましょう。</p>
+<p>黒い画面でコマンドをぺしぺし打ち込む方法もあるのですが、この記事ではもっと簡単にGitHubを扱えるアプリケーションをご紹介します。</p>
+<p>リポジトリのトップ画面にある「Code」メニューから「Open with GitHub Desktop」をクリックしてください。</p>
+<p><img src="images/github-26.png" alt=""></p>
+<p>ブラウザで次のような画面が開きます。</p>
+<p>これは「GitHub Desktop」というGitHub公式アプリケーションのダウンロード画面です。<br>
+このアプリケーションをインストールすればWindowsでもMacでも同じ方法が使えますし、無料ですし、何より黒い画面に謎のコマンドを打ち込まずに済みます。</p>
+<p>早速インストールしましょう。</p>
+<p><img src="images/github-27.png" alt=""></p>
+<p>ダウンロードボタンをクリックするとお使いのOSに合ったインストーラがダウンロードされます。</p>
+<p><img src="images/github-28.png" alt=""></p>
+<p>ダウンロードされたインストーラを開くとGitHub Desktopアプリのインストールが始まります。</p>
+<p><img src="images/github-29.png" alt=""></p>
+<p>次のような画面が表示されるので「Sign in to GitHub.com」ボタンをクリックします。</p>
+<p><img src="images/github-30.png" alt=""></p>
+<p>ブラウザ上でGitHubの次のような認証画面が開くので「Authorize desktop」をクリックします。</p>
+<p>もしこの画面が表示されない場合は、お使いのブラウザでGitHubにサインインできているか確認しましょう。</p>
+<p><img src="images/github-31.png" alt=""></p>
+<p>ブラウザでの認証に成功すると「Open GitHubDesktop?」と尋ねられますので「Open GitHubDesktop」をクリックします。</p>
+<p><img src="images/github-32.png" alt=""></p>
+<p>再びGitHub Desktopアプリが表示されます。</p>
+<p><img src="images/github-33.png" alt=""></p>
+<p>そして次のような画面が表示されますので「Finish」をクリックします。<br>
+以上でGitHub Desktopアプリのインストールは完了です。</p>
+<p><img src="images/github-34.png" alt=""></p>
+<h3 id="cloneとは">Cloneとは？</h3>
+<p>GitHub Desktopアプリがインストールできたので早速クローン（Clone）を試します。</p>
+<p>クローンとは、先ほど作ったようなリポジトリをあなたのローカルPCに持ってくる操作です。</p>
+<p>GitHub Desktopアプリの右側に先ほど作ったリポジトリが表示されているはずなのでクリックします。</p>
+<p><img src="images/github-35.png" alt=""></p>
+<p>「Clone （あなたのアカウント名）/（あなたのリポジトリ名）」と書かれたボタンをクリックします。</p>
+<p><img src="images/github-36.png" alt=""></p>
+<p>次のようにどこにクローンするか設定する画面が表示されます。</p>
+<p><img src="images/github-37.png" alt=""></p>
+<p>この記事では「C:\Work」の中にクローンします。<br>
+お好きな場所にクローンできますが、すべての階層が英語だけの場所にクローンすることをお勧めします。</p>
+<p>コンピューターの世界では英語のアルファベットは特別で、使う文字をアルファベットと数字、ハイフン、アンダースコアくらいに留めると、それだけでトラブルに遭遇しづらくなります。</p>
+<p><img src="images/github-38.png" alt="">
+<img src="images/github-39.png" alt="">
+<img src="images/github-40.png" alt=""></p>
+<p>クローンが完了すると次のように表示されます。</p>
+<p>「Show in Explorer」（Macの場合はおそらく「Show in Finder」）ボタンをクリックします。</p>
+<p><img src="images/github-41.png" alt=""></p>
+<p>右下のようにあなたのローカルPC上にクローンされたリポジトリが表示されます。</p>
+<p><img src="images/github-42.png" alt=""></p>
+<p>先ほどWeb上で作り編集したテキストファイルを開いてみましょう。</p>
+<p><img src="images/github-43.png" alt=""></p>
+<p>Web上と同じ内容になっていることが確認できます。<br>
+以上でクローンは完了です。</p>
+<p><img src="images/github-44.png" alt=""></p>
+<h3 id="commit--pushとは">Commit &amp; Pushとは？</h3>
+<p>では次に、ローカルでUnityプロジェクトを作り、クラウド上に預けてみましょう！<br>
+この操作はコミット（Commit）とプッシュ（Push）の2段階に分かれますので順にやってみましょう。</p>
+<h4 id="サンプルのunityプロジェクトを作る">サンプルのUnityプロジェクトを作る</h4>
+<p>まずは見慣れたUnity Hubの画面でUnityバージョンを指定してUnityプロジェクトを作ります。</p>
+<p><img src="images/github-45.png" alt=""></p>
+<p>この記事ではVRCSDKやアセットのインポートは省略します。<br>
+実際には何かをインポートしたり保存する度にこのコミットの手順を行なっておくことをお勧めします。<br>
+細かくコミットすることで、何か問題が発生したときにより細かくどの時点か指定して時を戻せるようになります。</p>
+<p>Unityプロジェクトの保存先には、先ほどリポジトリをクローンした場所を指定します。</p>
+<p><img src="images/github-46.png" alt=""></p>
+<p>指定通りUnityプロジェクトがクローンしたリポジトリ内に作られます。</p>
+<p><img src="images/github-47.png" alt=""></p>
+<h4 id="gitignore-ファイルを置く">.gitignore ファイルを置く</h4>
+<p>次にコミットするのですが、Unityプロジェクトの場合はコミット前に一手間必要です。</p>
+<p>GitHubのWeb上でリポジトリ作成時に作った「.gitignore（ドット ギット イグノア）」ファイルを使います。<br>
+このファイルを所定の場所に置くことで「コミットする必要がないファイル」を除外してくれます。</p>
+<p>まず今作ったばかりのUnityプロジェクトを確認します。</p>
+<p>右上のGitHub Desktopを見ると、線を引いた箇所に「1946 changed files」と書かれています。<br>
+これは、このままコミットするとGitHubに1946個のファイルが預けられることを示しています。</p>
+<p>しかし実はこれらのファイルのほとんどはバージョン管理する必要がありません。<br>
+Unityが作業用に自動で作ったり消したりする一時的なファイルが多く含まれているためです。</p>
+<p><img src="images/github-48.png" alt=""></p>
+<p>そこで「.gitignore」ファイルをUnityプロジェクトのフォルダの中にコピーします。</p>
+<p><img src="images/github-49.png" alt=""></p>
+<p>そしてもう一度GitHub Desktopの画面を見ると「23 changed files」と表示が変わりました。<br>
+管理対象のファイルが1946から23まで大幅に減ったことを示しています。</p>
+<p>「1946」や「23」といった数は違っても問題ありませんが、もし数が全く変わらない場合は操作を失敗していないか確認しましょう。<br>
+また、GitHub Desktopの表示が変わらない場合は、アプリ左上部の「Changes」「History」と書かれたタブを切り替えることで表示内容が更新されます。</p>
+<p>このように「.gitignore」ファイルをUnityプロジェクトのフォルダに入れることで、バージョン管理不要なファイルを管理対象から外すことができました。</p>
+<p>この「.gitignore」ファイルを置く操作は、Unityプロジェクトを追加した際に毎回必要です。</p>
+<p><img src="images/github-50.png" alt=""></p>
+<h4 id="commitする">Commitする</h4>
+<p>これで作ったUnityプロジェクトをGitHubさんに預ける準備ができました。<br>
+ではコミットしましょう。</p>
+<p>GitHub Desktopのこの部分にコメントを書きボタンを押すことでコミットできます。<br>
+このコメントは日本語や絵文字を使っても大丈夫です。<br>
+「Unityプロジェクト作成」「○○をインポート」など変更内容をコメントとして残しておくことで、時を戻したくなったときにわかりやすくなります。</p>
+<p>また、コミットはあなたのローカルPCだけで完結しますのでWi-FiやLANに繋がっていなくてもできます。</p>
+<p><img src="images/github-51.png" alt=""></p>
+<h3 id="pushする">Pushする</h3>
+<p>次に、コミットしたコミット（バージョン）をGitHubに送りましょう。<br>
+世界のどこかにあるクラウドサーバーに送りつけるイメージです。<br>
+この操作をプッシュ（Push）と呼びます。</p>
+<p>操作はGitHub Desktopアプリの「Push origin」ボタンをクリックするだけです。</p>
+<p><img src="images/github-52.png" alt=""></p>
+<p>プッシュしてローカルPCからクラウドにコミット（バージョン）を預けておくことで、仮に手元のデータが消えてもクラウドから復元できるようになります。</p>
+<p>逆に、プッシュされていないコミット（バージョン）はお手元から消えれば永久に失われてしまいますので気をつけてください。<br>
+慣れるまではコミットしたら必ずプッシュしておくと安心です。</p>
+<p><img src="images/github-53.png" alt=""></p>
+<h4 id="さらにunityプロジェクト編集しcommit--pushする">さらにUnityプロジェクト編集しCommit &amp; Pushする</h4>
+<p>練習としてUnityプロジェクトにCubeを置いてコミットしプッシュしてみましょう。</p>
+<p><img src="images/github-54.png" alt="">
+<img src="images/github-55.png" alt=""></p>
+<p>Unityプロジェクト特有の問題として、シーンが保存されているか、またビルド中などで一時的なカメラやオブジェクトが配置されていないか注意します。</p>
+<p><img src="images/github-56.png" alt=""></p>
+<p>Cubeを置いてシーンを保存するとGitHub Desktopアプリで変更箇所が表示されます。</p>
+<p>1つのシーンにCubeを置いただけであれば変更はシーンファイル1つだけでしょう。<br>
+このように行った変更とGitHub Desktopアプリの表示を見比べることで、変更内容が想定通りかある程度確認できます。</p>
+<p><img src="images/github-57.png" alt=""></p>
+<p>GitHub Desktopアプリ上でコミットしプッシュします。</p>
+<p><img src="images/github-58.png" alt=""></p>
+<h4 id="revertとは">Revertとは？</h4>
+<p>ここでようやく時を戻す方法の登場です。<br>
+時を戻すとはつまり「現在のコミット（バージョン）を取り消し、過去のコミット（バージョン）を復元すること」です。</p>
+<p>この操作をリバート（Revert）と呼びます。</p>
+<p>先ほどCubeを置いたUnityプロジェクトを、Cubeを置く前に戻してみましょう。</p>
+<p>GitHub DesktopアプリのHistoryからCubeを置いたコミット（バージョン）を選び右クリックします。</p>
+<p>表示されたメニューから「Revert changes in commit」をクリックします。<br>
+これで新しく「リバートコミット（バージョン）」ができます。<br>
+このようにリバートは実はコミットの一種です。</p>
+<p><img src="images/github-59.png" alt=""></p>
+<p>そしてUnityを選択すると画像のようにリロードを勧められます。</p>
+<p><img src="images/github-60.png" alt=""></p>
+<p>リロードすると先ほど置いたはずのCubeが消えています。<br>
+このようにUnityプロジェクトの時を戻すことができました。</p>
+<p><img src="images/github-61.png" alt=""></p>
+<p>場合によってはリロードがうまくできず、Unityを閉じてLibraryフォルダを消すなどの対応が必要かもしれません。</p>
+<p>またリバートは実は理想的な方法ではありません。<br>
+慣れてきたら「git reset」について調べてみてください。</p>
+<h3 id="pullとは">Pullとは？</h3>
+<p>この記事で扱う最後の操作としてプル（Pull）をご紹介します。<br>
+プルはクラウド上のバージョンをローカルに持ってくる操作です。</p>
+<p>先ほどご紹介したクローンはローカルに無いリポジトリを新しく持ってくる操作でした。<br>
+それに対してプルはすでにローカルにあるリポジトリに、新しいバージョンだけを持ってくる点が違います。</p>
+<h4 id="web上で新しいバージョンをコミットする">Web上で新しいバージョンをコミットする</h4>
+<p>まず説明のために「ローカルには無いがクラウド上にだけあるコミット（バージョン）」を作ります。</p>
+<p>再びWeb上でリポジトリのトップ画面から、以前の手順で作ったテキストファイルを編集しましょう。</p>
+<p><img src="images/github-62.png" alt="">
+<img src="images/github-63.png" alt="">
+<img src="images/github-64.png" alt="">
+<img src="images/github-65.png" alt=""></p>
+<p>そしてコミットします。<br>
+先ほどは説明を省略しましたが、Web上でのコミットは同時にプッシュまで行われるイメージです。</p>
+<p><img src="images/github-66.png" alt=""></p>
+<h4 id="pullする">Pullする</h4>
+<p>ではあなたのローカルPCに戻ってプルしましょう。</p>
+<p>GitHub Desktopアプリでの操作は簡単で、上部の「Repository」メニューを開いて「Pull」ボタンをクリックするだけです。</p>
+<p><img src="images/github-67.png" alt=""></p>
+<p>これでWeb上、つまりローカルPC以外で作られたコミット（バージョン）をローカルPC上に取得できました。</p>
+<p><img src="images/github-68.png" alt="">
+<img src="images/github-69.png" alt=""></p>
+<p>この操作は複数台のPCで交互に作業する場合や、後々他の方と共同で制作する際に頻繁に使います。<br>
+またそういう場合にはコンフリクト（Conflict）やマージ（Merge）について知っておくと便利です。</p>
+<h2 id="注意事項">注意事項</h2>
+<h3 id="privateとpublic">PrivateとPublic</h3>
+<p>GitHubは元々プログラマ向けのソースコード共有サービスとして設計されています。<br>
+そのためソースコードの公開に適した機能や設定が多くあります。</p>
+<p>例えばリポジトリ作成画面ではあらかじめ「Public」が選択されています。</p>
+<p><img src="images/github-70.png" alt=""></p>
+<p>しかしVRChat向けのUnityプロジェクトや3Dモデルは公開したくない場合がほとんどでしょう。</p>
+<p>また次のようなデータは大抵の場合公開や再配布が禁止されています。</p>
+<ul>
+<li>Unity Asset Storeで入手したアセット</li>
+<li>Boothで入手したモデルデータ</li>
+</ul>
+<p>そのため、リポジトリ作成時にはPrivate（あるいは意図してPublic）に設定できているか確認してください。<br>
+なおPrivate／Publicは後から切り替えることができます。</p>
+<h3 id="ファイルは100mbまでリポジトリは5gbまで">ファイルは100MBまで／リポジトリは5GBまで</h3>
+<p>GitHubにPushできるファイルやリポジトリ自体にはサイズの上限があります。</p>
+<p>ファイルは１つあたり100MBまで、リポジトリ自体は5GBまでしか扱うことができません。<br>
+適度にリポジトリを分割する、あるいはGit LFSなどの高度な機能を使うことでこの制限を回避できます。</p>
+<p><a href="https://docs.github.com/ja/repositories/working-with-files/managing-large-files/about-large-files-on-github">About large files on GitHub</a></p>
+<h3 id="無料アカウントは1人1つまで">無料アカウントは1人1つまで</h3>
+<p><a href="https://docs.github.com/ja/github/site-policy/github-terms-of-service#3-account-requirements">GitHub利用規約/B. アカウント利用規約/3. アカウントの要件</a></p>
+<blockquote>
+<p>1 人の個人または 1 つの法人が複数の無料「アカウント」を保持することはできません</p>
+</blockquote>
+<p>この記事でご紹介した方法を使って、期限なく無償でUnityプロジェクトや他のファイルを管理できます。<br>
+しかし無償のGitHubアカウントは１人１つまでと決められていますのでご注意ください。</p>
+<h2 id="最後に">最後に</h2>
+<p>この記事では全く初めてGitHubを使う方が、必要な最小限の手順で、大切なUnityプロジェクトやその他のファイルを安全に管理できる方法をご紹介しました。</p>
+<p>ぼく自身もご紹介した手順+αで、いくつものUnityプロジェクトやBlenderで作ったモデル、Photoshopのファイルなどを管理しており、実際にUnityプロジェクトが壊れた際に復旧できるなどの恩恵を受けています。</p>
+<blockquote class="twitter-tweet"><p lang="ja" dir="ltr">SDKを VRCSDK3-AVATAR-2021.05.21.12.13_Public にアップデート→✅OK<br>UdonSharp_v0.19.11 をインポート→🆖<br><br>ここかー！</p>&mdash; emu-v🌱えむ (@emu0v) <a href="https://twitter.com/emu0v/status/1400411843764514820?ref_src=twsrc%5Etfw">June 3, 2021</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<p>この記事がお役に立ち、あなたがせっかく作ったUnityプロジェクトやBlender、Photoshopのファイルが失われず、悲しい事故から救われることを願っています 🥺</p>
+<p>もし「こういうときどうする？」みたいなご質問がありましたらVRChatでお会いしたときにでも気軽に聞いてください 💪</p>
+<p>そしてこの記事書くのすごく大変だったので、ツイッターやVRChatでコメントいただけたらとてもうれしいです！<br>
+あなたの一言で報われるぼくがいます 🙏</p>
+<hr>
+<h2 id="他の方の記事ご紹介">他の方の記事ご紹介</h2>
+<p>VRChat向けにGitやGitHubの記事を書いてくださってる方がおられますので勝手に紹介させていただきます。</p>
+<h3 id="github-for-unityを使う方法">GitHub for Unityを使う方法</h3>
+<p><a href="https://qiita.com/toRisouP/items/97c4cddcb735acde2f03">【超初心者向け】Unityのプロジェクトを、GitHub for Unityを使って超簡単にバックアップする方法</a></p>
+<p>GitHub Desktopアプリではなく、GitHub for Unityを使う方法が紹介されています。</p>
+<p>GitHubの操作がUnity上に統合されるので便利そうです。<br>
+デメリットとしてはUnityプロジェクト以外のファイルの管理がしづらく感じるかもしれません。<br>
+（Unityプロジェクト内にBlenderやPhotoshopのファイルを入れてしまえば管理できそうです）</p>
+<h3 id="sourcetreeとbitbucketを使う方法">SourceTreeとBitbucketを使う方法</h3>
+<p><a href="https://qiita.com/sansuke05/items/d4dd046eef65a987ed02">【Git】【Unity】VRChatterのためのGit入門</a></p>
+<p>GitHubとGitHub Desktopアプリではなく、SourceTreeアプリとBitbucketというクラウドサービスを使う方法が紹介されています。</p>
+<p>どのような方法でも良いので、あなたの肌に合う方法が見つかることを願っています 🙏 ✨</p>
+
+        </div>
+
+        
+        <div class="row pl-3 pr-3">
+        
+        <div class="col-md-6 share-buttons">
+        
+          </div>
+
+        
+        
+        </div>
+
+
+
+      
+      <hr />
+        
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row next-prev-navigator">
+  
+  
+</div>
+
+      <hr />
+
+      
+      
+      
+      
+
+      </div>
+    </div>
+  </div>
+  
+  <a id="scroll-to-top" class="btn"><i class="fas fa-chevron-circle-up"></i></a>
+  
+</section>
+
+
+      
+      
+  <section class="toc-section" id="toc-section">
+    
+    <div class="toc-holder">
+      <h5 class="text-center pl-3">Table of Contents</h5>
+      <hr>
+      <div class="toc">
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#githubってなに">GitHubってなに？</a>
+      <ul>
+        <li><a href="#githubでできること">GitHubでできること</a></li>
+      </ul>
+    </li>
+    <li><a href="#この記事の範囲">この記事の範囲</a>
+      <ul>
+        <li><a href="#この記事で扱うこと">この記事で扱うこと</a></li>
+        <li><a href="#この記事で扱わないこと">この記事で扱わないこと</a></li>
+      </ul>
+    </li>
+    <li><a href="#無料でgithubアカウントを取得する">無料でGitHubアカウントを取得する</a></li>
+    <li><a href="#web上でgithubを試す">Web上でGitHubを試す</a>
+      <ul>
+        <li><a href="#リポジトリとは">リポジトリとは？</a></li>
+        <li><a href="#まずはテキストファイルをコミットする">まずはテキストファイルを「コミット」する</a></li>
+        <li><a href="#さらにテキストファイルを編集してコミットする">さらにテキストファイルを編集して「コミット」する</a></li>
+      </ul>
+    </li>
+    <li><a href="#ローカルpcでgithub-desktopアプリを使う">ローカルPCでGitHub Desktopアプリを使う</a>
+      <ul>
+        <li><a href="#cloneとは">Cloneとは？</a></li>
+        <li><a href="#commit--pushとは">Commit &amp; Pushとは？</a></li>
+        <li><a href="#pushする">Pushする</a></li>
+        <li><a href="#pullとは">Pullとは？</a></li>
+      </ul>
+    </li>
+    <li><a href="#注意事項">注意事項</a>
+      <ul>
+        <li><a href="#privateとpublic">PrivateとPublic</a></li>
+        <li><a href="#ファイルは100mbまでリポジトリは5gbまで">ファイルは100MBまで／リポジトリは5GBまで</a></li>
+        <li><a href="#無料アカウントは1人1つまで">無料アカウントは1人1つまで</a></li>
+      </ul>
+    </li>
+    <li><a href="#最後に">最後に</a></li>
+    <li><a href="#他の方の記事ご紹介">他の方の記事ご紹介</a>
+      <ul>
+        <li><a href="#github-for-unityを使う方法">GitHub for Unityを使う方法</a></li>
+        <li><a href="#sourcetreeとbitbucketを使う方法">SourceTreeとBitbucketを使う方法</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+
+  
+      
+  
+
+
+
+  
+  
+    
+  
+
+  
+  
+
+  
+  
+
+
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  
+    
+  
+  
+
+  
+  
+  
+
+  <footer class="container-fluid text-center align-content-center footer pb-2">
+    <div class="container pt-5">
+      <div class="row text-left">
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Navigation</h5>
+          
+        </div>
+        
+        
+        <div class="col-md-4 col-sm-12">
+          <h5>Contact me:</h5>
+          <ul>
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+    </div>
+    
+    
+    <hr />
+    <div class="container">
+      <div class="row text-left">
+        <div class="col-md-4">
+          <a id="theme" href="https://github.com/hossainemruz/toha" target="_blank" rel="noopener">
+            <img src="/images/theme-logo_hu8376fd15465fef26ffe66b6bcf0ca686_13669_32x0_resize_box_3.png" alt="Toha Theme Logo">
+            Toha
+          </a>
+        </div>
+        <div class="col-md-4 text-center">© 2021 Copyright.</div>
+        <div class="col-md-4 text-right">
+          <a id="hugo" href="https://gohugo.io/" target="_blank" rel="noopener">Powered by
+          <img
+            src="/images/hugo-logo.svg"
+            alt="Hugo Logo"
+            height="18"
+          />
+          </a>
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="/js/popper.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="/js/navbar.js"></script>
+<script type="text/javascript" src="/js/plyr.js"></script>
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
+<script src="/js/single.js"></script>
+<script>
+  hljs.initHighlightingOnLoad();
+</script>
+
+
+  </body>
+</html>
